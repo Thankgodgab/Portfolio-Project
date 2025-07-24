@@ -1,6 +1,8 @@
+import Hero from "../Components/molecules/Hero";
+
 function Home() {
     return (
-        <div>Home</div>
+        <Hero />
     )
 }
 

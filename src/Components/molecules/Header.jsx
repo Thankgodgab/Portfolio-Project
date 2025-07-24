@@ -2,6 +2,7 @@ import { FaBars } from "react-icons/fa";
 import logo from "../../assets/Gabriel-logo.svg";
 import { useState } from "react";
 import { LiaTimesSolid } from "react-icons/lia";
+import CtaBtn from "../organisms/CtaBtn";
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,8 +43,8 @@ function Header() {
                 </div>
                 <div className="w-[20%] flex items-center justify-end grow p-2.5">
                     <div className="hidden lg:flex items-center justify-center h-full">
-                        <a href="#" className="py-[17px] px-[30px] text-[16px] text-primary font-semibold bg-gradient-to-r from-accent-secondary to-accent rounded-4xl hover:bg-gradient-to-r hover:from-accent hover:to-accent-secondary transition-colors duration-300 ease-in-out">
-                            Download Cv
+                        <a href="#">
+                            <CtaBtn text="Download CV" />
                         </a>
                     </div>
                     <div className="md:hidden flex items-center justify-center  bg-gradient-to-r from-accent-secondary to-accent rounded-lg text-primary">
