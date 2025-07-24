@@ -1,7 +1,11 @@
+import Header from "./Components/molecules/Header"
 
 function App() {
   return (
-    <div>App</div>
+    <div className="w-full h-screen flex flex-col items-center justfy-center bg-primary font-primary">
+      <Header />
+      
+    </div>
   )
 }
 
