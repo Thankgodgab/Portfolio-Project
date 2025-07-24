@@ -1,10 +1,22 @@
+import { Route, Routes } from "react-router-dom"
 import Header from "./Components/molecules/Header"
+import Home from "./Pages/Home"
+import About from "./Pages/About"
+import Services from "./Pages/Services"
+import Contact from "./Pages/Contact"
 
 function App() {
   return (
-    <div className="w-full h-screen flex flex-col items-center justfy-center bg-primary font-primary">
+    <div className="w-full min-h-screen bg-primary font-primary">
       <Header />
-      
+      <main className="relative pt-[130px]">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
     </div>
   )
 }
