@@ -7,7 +7,7 @@ import * as motion from "motion/react-client"
 
 function Hero() {
     return (
-        <div className="w-full h-full flex flex-col md:flex-row items-center justify-center gap-y-[40px] pb-[100px]">
+        <div className="w-full h-full flex flex-col md:flex-row items-center justify-center gap-y-[40px] px-2.5">
             <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,33 +36,32 @@ function Hero() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
-
             className="pl-4 pr-2.5 relative flex flex-col w-full md:w-2/4 h-full items-center justify-center">
                 <div className="w-full h-full">
                     <img src={heroImage} alt="Profile picture" />
                 </div>
-                <div className="p-4 rounded-2xl bg-white flex gap-3 items-start justify-center text-primary absolute right-0 top-[200px] overflow-hidden group hover:bg-none transition-colors duration-500">
-                    <span className="absolute left-0 bottom-0 w-full h-full bg-gradient-to-r from-accent-secondary to-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-0"></span>
-                    <span className='text-[25px] md:text-[40px] font-bold relative z-10'>8+</span>
-                    <span className='font-semibold text-[14px] md:text-[18px] relative z-10'>Years <br />Experience </span>
+                <div className="p-3 md:p-4 rounded-2xl bg-white flex gap-3 items-start justify-center text-primary absolute right-0 top-[40%] overflow-hidden group hover:bg-none transition-colors duration-500">
+                    <span className="absolute left-0 bottom-0 w-full h-full bg-gradient-to-r from-accent-secondary to-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-1"></span>
+                    <span className='text-[25px] md:text-[40px] font-bold relative z-1'>2+</span>
+                    <span className='font-semibold text-[14px] md:text-[18px] relative z-1'>Years <br />Experience </span>
                 </div>
-                <div className="p-4 rounded-2xl bg-white flex flex-col gap-3 items-start justify-center text-primary absolute left-0 top-[200px] overflow-hidden group hover:bg-none transition-colors duration-500">
+                <div className="p-3 md:p-4 rounded-2xl bg-white flex flex-col gap-[4px] md:gap-3 items-start justify-center text-primary absolute left-0 top-[75%] overflow-hidden group hover:bg-none transition-colors duration-500">
                     <span className="absolute left-0 bottom-0 w-full h-full bg-gradient-to-r from-accent-secondary to-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-0"></span>
-                    <span className='text-[22px] font-bold relative z-10'>Real Customer</span>
-                    <div className='relative z-10 flex w-full items-center justify-start'>
-                        <div className="w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-white">
+                    <span className='text-[16px] md:text-[22px] font-bold relative z-1'>Real Customer</span>
+                    <div className='relative z-1 flex w-full items-center justify-start'>
+                        <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-white">
                             <img src="https://randomuser.me/api/portraits/men/1.jpg" className='w-full h-full object-cover' alt="Customer" />
                         </div>
-                        <div className="ml-[-30px] w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-white">
+                        <div className="ml-[-20px] w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-white">
                             <img src="https://randomuser.me/api/portraits/men/1.jpg" className='w-full h-full object-cover' alt="Customer" />
                         </div>
-                        <div className="ml-[-30px] w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-white">
+                        <div className="ml-[-20px] w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-white">
                             <img src="https://randomuser.me/api/portraits/men/1.jpg" className='w-full h-full object-cover' alt="Customer" />
                         </div>
-                        <div className="ml-[-30px] w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-white">
+                        <div className="ml-[-20px] w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-white">
                             <img src="https://randomuser.me/api/portraits/men/1.jpg" className='w-full h-full object-cover' alt="Customer" />
                         </div>
-                        <div className="ml-[-25px] w-[50px] h-[50px] rounded-full overflow-hidden bg-gradient-to-r from-accent-secondary to-accent text-primary flex items-center justify-center">
+                        <div className="ml-[-15px] w-[40px] h-[40px] rounded-full overflow-hidden bg-gradient-to-r from-accent-secondary to-accent text-primary flex items-center justify-center">
                            <GoPlus size={30} />
                         </div>
                     </div>

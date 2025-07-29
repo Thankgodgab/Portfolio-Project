@@ -54,7 +54,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div className={`fixed top-0 left-0 h-full w-full bg-gradient-to-r from-accent-secondary to-accent p-2.5 flex flex-col transform ${ isMenuOpen ? "translate-x-0" : "-translate-x-full" } transition-transform duration-300 ease-in-out`}>
+            <div className={`z-55 fixed top-0 left-0 h-full w-full bg-gradient-to-r from-accent-secondary to-accent p-2.5 flex flex-col transform ${ isMenuOpen ? "translate-x-0" : "-translate-x-full" } transition-transform duration-300 ease-in-out`}>
                 <div className="w-full h-12 flex items-center justify-end border-b-2 border-divider py-[30px]">
                     <div className="md:hidden flex items-center justify-center  bg-primary rounded-lg text-white">
                         <button className="p-[10px] w-full h-full flex items-center justify-center" onClick={toggleMenu}>
