@@ -1,10 +1,7 @@
-import React from 'react'
-import ServiceCardContent from '../organisms/ServiceCardContent'
-
-function Card() {
+function Card({ className, content }) {
   return (
-    <div>
-        <ServiceCardContent />
+    <div className={`${className} bg-white/5 backdrop-blur-md rounded-xl flex flex-col justify-between items-center p-6 group `}>
+        {content}
     </div>
   )
 }

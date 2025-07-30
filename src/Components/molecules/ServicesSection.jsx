@@ -23,7 +23,7 @@ function ServicesSection() {
               </button>
             </div>
         </div>
-        <div className="w-full">
+        <div className="w-full pt-[50px]">
           <CardCarousel />
         </div>
     </div>
