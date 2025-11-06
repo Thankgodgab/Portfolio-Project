@@ -15,6 +15,9 @@ import ServiceCardContent from "../organisms/ServiceCardContent"
 import Card from "./Card"
 import { AiOutlineAndroid } from "react-icons/ai"
 
+import * as motion from "motion/react-client"
+
+
 
 
 
@@ -40,7 +43,12 @@ const services = [
 
 function CardCarousel() {
   return (
-    <div className="w-full flex gap-5">
+    <motion.div 
+    inital={{ opacity: 0, x: 50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
+    // viewport={{ once: true }}
+    className="w-full flex gap-5 px-[20px]">
       <Swiper
         slidesPerView={4}
         loop={true}
@@ -68,7 +76,7 @@ function CardCarousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </motion.div>
   )
 }
 

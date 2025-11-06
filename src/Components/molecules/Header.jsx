@@ -14,7 +14,7 @@ function Header() {
   };
 
     return (
-        <header className="w-full bg-transparent max-h-[100px] flex items-center justify-center fixed top-0 z-5">
+        <header className="w-full bg-transparent max-h-[100px] flex items-center justify-center  z-5">
             <div className="w-full h-full flex items-center justify-between px-2.5 py-4 border-b border-divider md:border-none">
                 <div className="p-2.5 h-[150px] w-[200px] flex items-center justify-center">
                     <img src={logo} alt="Gabriel logo" className="h-full w-full object-contain" />

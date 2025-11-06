@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import CtaBtn from '../organisms/CtaBtn'
 import SpanText from '../organisms/SpanText'
 import SubTitle from '../organisms/SubTitle'
@@ -7,11 +8,12 @@ import * as motion from "motion/react-client"
 
 function Hero() {
     return (
-        <div className="w-full h-full flex flex-col md:flex-row items-center justify-center gap-y-[40px] px-2.5">
+        <div className="w-full h-full flex flex-col md:flex-row items-center justify-center gap-y-[40px] px-2.5 md:px-[50px]">
             <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
+            viewport={{ once: true }}
             className="p-2.5 w-full md:w-2/4 flex flex-col gap-[40px] group">
                 <div className="group w-full flex flex-col gap-4 items-center justify-start">
                     <SubTitle text="Your Vision, My Design Expertise" />
@@ -36,6 +38,7 @@ function Hero() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
+            viewport={{ once: true }}
             className="pl-4 pr-2.5 relative flex flex-col w-full md:w-2/4 h-full items-center justify-center">
                 <div className="w-full h-full">
                     <img src={heroImage} alt="Profile picture" />
