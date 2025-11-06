@@ -44,7 +44,7 @@ const services = [
 function CardCarousel() {
   return (
     <motion.div 
-    inital={{ opacity: 0, x: 50 }}
+    initial={{ opacity: 0, x: 50 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
     // viewport={{ once: true }}
