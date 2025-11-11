@@ -7,7 +7,7 @@ import Contact from "./Pages/Contact"
 
 function App() {
   return (
-    <div className="w-full min-h-screen bg-primary font-primary">
+    <div className="w-full min-h-screen bg-primary font-primary overflow-x-hidden">
       <Header />
       <main className="relative pt-[160px]">
         <Routes>
