@@ -1,5 +1,6 @@
 import AboutSection from "../Components/molecules/AboutSection";
 import Hero from "../Components/molecules/Hero";
+import PortfolioSection from "../Components/molecules/PortfolioSection";
 import ServicesSection from "../Components/molecules/ServicesSection";
 import SkillSection from "../Components/molecules/SkillSection";
 import Carousel from "../Components/organisms/Carousel";
@@ -13,6 +14,7 @@ function Home() {
             <ServicesSection />
             <AboutSection />
             <SkillSection />
+            <PortfolioSection />
         </div>
         </>
     )
