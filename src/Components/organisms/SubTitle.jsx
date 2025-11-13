@@ -9,7 +9,7 @@ function SubTitle({ text, title, titleSpan }) {
                 <h2 className="text-white text-[16px] font-medium leading-[22px]">{text}</h2>
             </div>
             <div className="w-full flex gap-2.5">
-                <h2 className="text-[42px] text-white leading-[1.2em] font-semibold">
+                <h2 className="text-[35px] md:text-[42px] text-white leading-[1.2em] font-semibold">
                     {title}
                     <SpanText text={titleSpan} />
                 </h2>

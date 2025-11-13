@@ -1,45 +1,40 @@
+import { FaReact, FaJsSquare, FaCss3, FaHtml5, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 
-
-export const SKILLS = [
+export const skills = [
     {
-        name: "HTML5",
-        level: "99",
-        icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+        name: 'React',
+        level: '80%',
+        icon: FaReact,
+        iconColor: 'text-blue-500'
     },
     {
-        name: "CSS3",
-        level: "95",
-        icon: "https://cdn-icons-png.flaticon.com/512/1126/1126012.png"
+        name: 'JavaScript',
+        level: '85%',
+        icon: FaJsSquare,
+        iconColor: 'text-yellow-500'
     },
     {
-        name: "JavaScript",
-        level: "90",
-        icon: "https://cdn-icons-png.flaticon.com/512/919/919825.png"
+        name: 'CSS3',
+        level: '90%',
+        icon: FaCss3,
+        iconColor: 'text-blue-600'
     },
     {
-        name: "React",
-        level: "90",
-        icon: "https://cdn-icons-png.flaticon.com/512/919/919825.png"
+        name: 'HTML5',
+        level: '98%',
+        icon: FaHtml5,
+        iconColor: 'text-orange-500'
     },
     {
-        name: "Node.js",
-        level: "70",
-        icon: "https://cdn-icons-png.flaticon.com/512/919/919825.png"
+        name: 'Node.js',
+        level: '75%',
+        icon: FaNodeJs,
+        iconColor: 'text-green-500'
     },
     {
-        name: "Express.js",
-        level: "70",
-        icon: "https://cdn-icons-png.flaticon.com/512/919/919825.png"
-    },
-    {
-        name: "MongoDB",
-        level: "65",
-        icon: "https://cdn-icons-png.flaticon.com/512/919/919825.png"
-    },
-    {
-        name: "Git",
-        level: "80",
-        icon: "https://cdn-icons-png.flaticon.com/512/919/919825.png"
+        name: 'Git',
+        level: '80%',
+        icon: FaGitAlt,
+        iconColor: 'text-red-500'
     }
-
-];
+]
