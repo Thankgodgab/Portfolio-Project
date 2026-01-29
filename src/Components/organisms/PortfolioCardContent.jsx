@@ -1,14 +1,15 @@
 import React from 'react'
-import image from '../../assets/Portfolio.png'
+import image from '../../assets/Portfolio-1.png'
+
 
 function PortfolioCardContent(
-    // { image, ProjectName }
+  // { image, ProjectName }
 ) {
   return (
     <div className="w-full h-full flex flex-col items-center justify-between gap-5">
-        <div className="w-full h-auto md:h-[400px] rounded-[50px]">
-            <img src={image} alt='' />
-        </div>
+      <div className="w-full h-[250px]  rounded-[50px]">
+        <img src={image} alt='' className='h-full w-full '/>
+      </div>
     </div>
   )
 }

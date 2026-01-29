@@ -26,6 +26,10 @@
   animation: marquee 15s linear infinite;
 }
 
+.animate-marquee-slow {
+  animation: marquee 40s linear infinite;
+}
+
 
 .swiper-pagination {
           position: relative;
