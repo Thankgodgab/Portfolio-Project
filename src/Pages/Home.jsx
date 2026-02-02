@@ -6,6 +6,8 @@ import SkillSection from "../Components/molecules/SkillSection";
 import EducationSection from "../Components/molecules/EducationSection";
 import WorkflowSection from "../Components/molecules/WorkflowSection";
 import TestimonialSection from "../Components/molecules/TestimonialSection";
+import ContactSection from "../Components/molecules/ContactSection";
+import Footer from "../Components/molecules/Footer";
 import Carousel from "../Components/organisms/Carousel";
 
 function Home() {
@@ -21,11 +23,14 @@ function Home() {
                 <EducationSection />
                 <WorkflowSection />
                 <TestimonialSection />
+                <ContactSection />
             </div>
         </>
     )
 }
 
 export default Home;
+
+
 
 
