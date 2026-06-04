@@ -5,6 +5,10 @@ import AboutSection from '../Components/molecules/AboutSection'
 import AboutApproach from '../Components/organisms/AboutApproach'
 import AboutFeatures from '../Components/organisms/AboutFeatures'
 import AboutTools from '../Components/organisms/AboutTools'
+import AboutExpertise from '../Components/organisms/AboutExpertise'
+import TestimonialSection from '../Components/molecules/TestimonialSection'
+import AboutFaq from '../Components/organisms/AboutFaq'
+import ContactSection from '../Components/molecules/ContactSection'
 
 function About() {
     return (
@@ -28,6 +32,18 @@ function About() {
 
             {/* Tools and Skills Section */}
             <AboutTools />
+
+            {/* Expertise & Skills */}
+            <AboutExpertise />
+
+            {/* Client Reviews */}
+            <TestimonialSection />
+
+            {/* Frequently Asked Questions */}
+            <AboutFaq />
+
+            {/* Contact Us Section */}
+            <ContactSection />
         </div>
     )
 }
