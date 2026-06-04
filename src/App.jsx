@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="w-full min-h-screen bg-primary font-primary overflow-x-hidden">
       <Header />
-      <main className="relative pt-[160px]">
+      <main className="relative pt-[70px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

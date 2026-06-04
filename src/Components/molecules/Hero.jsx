@@ -40,8 +40,8 @@ function Hero() {
             transition={{ duration: 1, scale: { type: "spring", stiffness: 100 } }}
             viewport={{ once: true }}
             className="pl-4 pr-2.5 relative flex flex-col w-full md:w-2/4 h-full items-center justify-center">
-                <div className="w-full h-full">
-                    <img src={heroImage} alt="Profile picture" />
+                <div className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[380px] lg:max-w-[440px] xl:max-w-[500px] mx-auto">
+                    <img src={heroImage} className="w-full h-auto object-contain" alt="Profile picture" />
                 </div>
                 <div className="p-3 md:p-4 rounded-2xl bg-white flex gap-3 items-start justify-center text-primary absolute right-0 top-[40%] overflow-hidden group hover:bg-none transition-colors duration-500">
                     <span className="absolute left-0 bottom-0 w-full h-full bg-gradient-to-r from-accent-secondary to-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-1"></span>
