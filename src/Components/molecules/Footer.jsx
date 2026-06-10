@@ -1,6 +1,6 @@
 import React from 'react'
 import * as Motion from 'motion/react-client'
-import logo from '../../assets/Gabriel-logo.svg'
+import logo from '../../assets/Gabriel-logo-dark.png'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaDribbble, FaArrowUp } from 'react-icons/fa'
 
 function Footer() {
@@ -83,7 +83,7 @@ function Footer() {
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-[30px]">
                 {/* Logo & Info */}
                 <div className="flex flex-col gap-8">
-                    <img src={logo} alt="Gabriel Logo" className="w-[140px] h-auto invert" />
+                    <img src={logo} alt="Gabriel Logo" className="w-[140px] h-auto" />
                     <p className="text-primary/70 text-[16px] leading-relaxed">
                         Crafting intuitive, user-centric designs that bring ideas to life. With a passion for innovation and creativity, I help businesses and individuals.
                     </p>

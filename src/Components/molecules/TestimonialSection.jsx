@@ -96,7 +96,7 @@ function TestimonialSection() {
                     viewport={{ once: true }}
                     className="w-full lg:w-1/2"
                 >
-                    <div className="relative bg-[#1D2432]/50 backdrop-blur-sm border border-white/5 rounded-[40px] p-8 md:p-12">
+                    <div className="relative bg-[#1D2432]/50 backdrop-blur-sm border border-white/5 rounded-[40px] p-5 md:p-12">
                         <Swiper
                             modules={[Autoplay, Navigation]}
                             spaceBetween={30}
@@ -121,12 +121,12 @@ function TestimonialSection() {
                                         </p>
                                         <div className="flex items-center justify-between mt-4">
                                             <div className="flex items-center gap-4">
-                                                <div className="w-[60px] h-[60px] rounded-full overflow-hidden">
+                                                <div className="w-[40px] md:w-[60px] h-[40px] md:h-[60px] rounded-full overflow-hidden">
                                                     <img src={item.avatar} alt={item.author} className="w-full h-full object-cover" />
                                                 </div>
                                                 <div className="flex flex-col">
-                                                    <h3 className="text-white text-[20px] font-bold">{item.author}</h3>
-                                                    <p className="text-white/50 text-[16px]">{item.role}</p>
+                                                    <h3 className="text-white text-[16px] md:text-[20px] font-bold">{item.author}</h3>
+                                                    <p className="text-white/50 text-[12px] md:text-[16px]">{item.role}</p>
                                                 </div>
                                             </div>
 

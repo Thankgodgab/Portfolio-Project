@@ -1,5 +1,5 @@
 import { FaBars } from "react-icons/fa";
-import logo from "../../assets/Gabriel-logo.svg";
+import logo from "../../assets/Gabriel-logo-light.png";
 import { useState } from "react";
 import { LiaTimesSolid } from "react-icons/lia";
 import CtaBtn from "../organisms/CtaBtn";
@@ -19,7 +19,7 @@ function Header() {
                 <div className="p-2.5 h-[150px] w-[200px] flex items-center justify-center">
                     <img src={logo} alt="Gabriel logo" className="h-full w-full object-contain" />
                 </div>
-                <div className="hidden p-2.5 w-[60%] md:flex items-center justify-center h-full ">
+                <div className="hidden p-2.5 w-[80%] md:flex items-center justify-center h-full ">
                     <div className="px-5 max-w-full h-full flex items-center justify-center bg-divider rounded-4xl">
                         <nav className="w-full h-full flex items-center justify-center">
                             <div className="w-full h-full flex items-center justify-center">

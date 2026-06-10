@@ -34,12 +34,12 @@ function WorkflowSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="w-full lg:w-1/2 aspect-[4/4.5] rounded-[60px] overflow-hidden"
+                className="w-fit lg:w-1/2 aspect-[4/4.5] rounded-[60px] overflow-hidden"
             >
                 <img
                     src={heroImg}
                     alt="Workflow Illustration"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-top"
                 />
             </motion.div>
 
