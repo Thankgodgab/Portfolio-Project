@@ -36,13 +36,13 @@ function AboutExpertise() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="w-full lg:w-[45%] relative flex justify-center lg:justify-start"
+                className="w-full lg:w-[45%] relative flex justify-center"
             >
-                <div className="relative w-full max-w-[500px] aspect-square rounded-[40px] overflow-hidden border border-white/10">
+                <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-[40px] overflow-hidden border border-white/10">
                     <img 
                         src={profileImage} 
                         alt="Expertise" 
-                        className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
+                        className="w-full h-full object-center grayscale hover:grayscale-0 transition-all duration-700" 
                     />
                 </div>
 

@@ -16,7 +16,7 @@ function Header() {
     return (
         <header className="w-full bg-transparent max-h-[100px] flex items-center justify-center  z-5">
             <div className="w-full h-full flex items-center justify-between px-2.5 py-4 border-b border-divider md:border-none">
-                <div className="p-2.5 h-[150px] w-[200px] flex items-center justify-center">
+                <div className="p-2.5 h-[80px] w-[150px] lg:h-[100px] lg:w-[200px] flex items-center justify-center">
                     <img src={logo} alt="Gabriel logo" className="h-full w-full object-contain" />
                 </div>
                 <div className="hidden p-2.5 w-[80%] md:flex items-center justify-center h-full ">
@@ -32,6 +32,9 @@ function Header() {
                                     </li>
                                     <li className="w-full h-full flex items-center justify-center group ">
                                         <a href="/services" className="py-[22px] px-[15px] text-[16px] text-white font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Services</a>
+                                    </li>
+                                    <li className="w-full h-full flex items-center justify-center group ">
+                                        <a href="/portfolio" className="py-[22px] px-[15px] text-[16px] text-white font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Portfolio</a>
                                     </li>
                                     <li className="w-full h-full flex items-center justify-center group ">
                                         <a href="/contact" className="py-[22px] px-[15px] text-[16px] text-white font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Contact</a>
@@ -72,6 +75,9 @@ function Header() {
                         </li>
                         <li className="w-full h-full flex items-center group ">
                             <a href="/services" className="py-[15px] px-[15px] text-[16px] text-primary font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Services</a>
+                        </li>
+                        <li className="w-full h-full flex items-center group ">
+                            <a href="/portfolio" className="py-[15px] px-[15px] text-[16px] text-primary font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Portfolio</a>
                         </li>
                         <li className="w-full h-full flex items-center group ">
                             <a href="/contact" className="py-[15px] px-[15px] text-[16px] text-primary font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Contact</a>

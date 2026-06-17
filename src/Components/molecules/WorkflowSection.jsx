@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import * as motion from 'motion/react-client'
 import SubTitle from '../organisms/SubTitle'
 import SpanText from '../organisms/SpanText'
-import heroImg from '../../assets/hero-img.png'
+import heroImg from '../../assets/about-us-img-1.jpeg'
 import { HiOutlineArrowNarrowUp, HiOutlineArrowNarrowDown } from "react-icons/hi";
 
 const workflowSteps = [
@@ -34,7 +34,7 @@ function WorkflowSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="w-fit lg:w-1/2 aspect-[4/4.5] rounded-[60px] overflow-hidden"
+                className="w-full max-w-[400px] aspect-[3/4] rounded-[60px] overflow-hidden"
             >
                 <img
                     src={heroImg}
