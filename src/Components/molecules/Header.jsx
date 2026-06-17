@@ -1,4 +1,5 @@
 import { FaBars } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/Gabriel-logo-light.png";
 import { useState } from "react";
 import { LiaTimesSolid } from "react-icons/lia";
@@ -25,19 +26,19 @@ function Header() {
                             <div className="w-full h-full flex items-center justify-center">
                                 <ul className="w-full gap-7 flex items-center justify-center h-full">
                                     <li className="w-full h-full flex items-center justify-center group ">
-                                        <a href="/" className="py-[22px] px-[15px] text-[16px] text-white font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Home</a>
+                                         <NavLink to="/" className={({ isActive }) => `py-[22px] px-[15px] text-[16px] font-semibold ${isActive ? "text-yellow-400" : "text-white"} group-hover:text-accent-secondary transition-colors duration-300 ease-in-out`}>Home</NavLink>
                                     </li>
                                     <li className="w-full h-full flex items-center justify-center group ">
-                                        <a href="/about" className="py-[22px] px-[15px] text-[16px] text-white font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">About</a>
+                                         <NavLink to="/about" className={({ isActive }) => `py-[22px] px-[15px] text-[16px] font-semibold ${isActive ? "text-yellow-400" : "text-white"} group-hover:text-accent-secondary transition-colors duration-300 ease-in-out`}>About</NavLink>
                                     </li>
                                     <li className="w-full h-full flex items-center justify-center group ">
-                                        <a href="/services" className="py-[22px] px-[15px] text-[16px] text-white font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Services</a>
+                                         <NavLink to="/services" className={({ isActive }) => `py-[22px] px-[15px] text-[16px] font-semibold ${isActive ? "text-yellow-400" : "text-white"} group-hover:text-accent-secondary transition-colors duration-300 ease-in-out`}>Services</NavLink>
                                     </li>
                                     <li className="w-full h-full flex items-center justify-center group ">
-                                        <a href="/portfolio" className="py-[22px] px-[15px] text-[16px] text-white font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Portfolio</a>
+                                         <NavLink to="/portfolio" className={({ isActive }) => `py-[22px] px-[15px] text-[16px] font-semibold ${isActive ? "text-yellow-400" : "text-white"} group-hover:text-accent-secondary transition-colors duration-300 ease-in-out`}>Portfolio</NavLink>
                                     </li>
                                     <li className="w-full h-full flex items-center justify-center group ">
-                                        <a href="/contact" className="py-[22px] px-[15px] text-[16px] text-white font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Contact</a>
+                                         <NavLink to="/contact" className={({ isActive }) => `py-[22px] px-[15px] text-[16px] font-semibold ${isActive ? "text-yellow-400" : "text-white"} group-hover:text-accent-secondary transition-colors duration-300 ease-in-out`}>Contact</NavLink>
                                     </li>
                                 </ul>
                             </div>
@@ -68,24 +69,25 @@ function Header() {
                 <div className="w-full  flex  justify-start">
                     <ul className="w-full flex flex-col items-center justify-start">
                         <li className="w-full h-full flex items-center group ">
-                            <a href="/" className="py-[15px] px-[15px] text-[16px] text-primary font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Home</a>
+                             <NavLink to="/" className={({ isActive }) => `py-[15px] px-[15px] text-[16px] font-semibold ${isActive ? "text-yellow-400" : "text-primary"} group-hover:text-accent-secondary transition-colors duration-300 ease-in-out`}>Home</NavLink>
                         </li>
                         <li className="w-full h-full flex items-center group ">
-                            <a href="/about" className="py-[15px] px-[15px] text-[16px] text-primary font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">About</a>
+                             <NavLink to="/about" className={({ isActive }) => `py-[15px] px-[15px] text-[16px] font-semibold ${isActive ? "text-yellow-400" : "text-primary"} group-hover:text-accent-secondary transition-colors duration-300 ease-in-out`}>About</NavLink>
                         </li>
                         <li className="w-full h-full flex items-center group ">
-                            <a href="/services" className="py-[15px] px-[15px] text-[16px] text-primary font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Services</a>
+                             <NavLink to="/services" className={({ isActive }) => `py-[15px] px-[15px] text-[16px] font-semibold ${isActive ? "text-yellow-400" : "text-primary"} group-hover:text-accent-secondary transition-colors duration-300 ease-in-out`}>Services</NavLink>
                         </li>
                         <li className="w-full h-full flex items-center group ">
-                            <a href="/portfolio" className="py-[15px] px-[15px] text-[16px] text-primary font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Portfolio</a>
+                             <NavLink to="/portfolio" className={({ isActive }) => `py-[15px] px-[15px] text-[16px] font-semibold ${isActive ? "text-yellow-400" : "text-primary"} group-hover:text-accent-secondary transition-colors duration-300 ease-in-out`}>Portfolio</NavLink>
                         </li>
                         <li className="w-full h-full flex items-center group ">
-                            <a href="/contact" className="py-[15px] px-[15px] text-[16px] text-primary font-semibold group-hover:text-accent-secondary group-active:text-accent-secondary transition-colors duration-300 ease-in-out">Contact</a>
+                             <NavLink to="/contact" className={({ isActive }) => `py-[15px] px-[15px] text-[16px] font-semibold ${isActive ? "text-yellow-400" : "text-primary"} group-hover:text-accent-secondary transition-colors duration-300 ease-in-out`}>Contact</NavLink>
                         </li>
                     </ul>
                 </div>
             </div>
-        </header>
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="fixed bottom-5 right-5 bg-accent-secondary text-white p-3 rounded-full shadow-lg hover:bg-accent hover:scale-105 transition transform">↑</button>
+</header>
     )
 }
 
