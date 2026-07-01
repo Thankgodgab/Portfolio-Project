@@ -10,18 +10,22 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 
-import { IoBrushOutline, IoCodeSlashOutline, IoDiamondOutline, IoHomeOutline } from "react-icons/io5"
+import { IoBrushOutline, IoCodeSlashOutline, IoDiamondOutline, IoHomeOutline, IoMove } from "react-icons/io5"
 import ServiceCardContent from "../organisms/ServiceCardContent"
 import Card from "./Card"
 import { AiOutlineAndroid } from "react-icons/ai"
 
 import * as motion from "motion/react-client"
+import { LuBot } from 'react-icons/lu';
 
 
 
 
 
 const services = [
+  { 
+    icon: <LuBot size={50} className="text-accent" />, 
+    title: 'AI Automation' },
   { 
     icon: <IoCodeSlashOutline size={50} className="text-accent" />, 
     title: 'Web Development' },
@@ -34,10 +38,11 @@ const services = [
   { 
     icon: <IoDiamondOutline size={50} className="text-accent" />, 
     title: 'Branding And Visual Identity' },
-  { 
-    icon: <IoHomeOutline size={50} className="text-accent" />, 
-    title: 'Real Estate Consulting' 
+    { 
+    icon: <IoMove size={50} className="text-accent" />, 
+    title: 'Motion Graphics' 
   },
+  
 ]
 
 
