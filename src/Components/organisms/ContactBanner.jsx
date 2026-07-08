@@ -2,8 +2,11 @@ import React from 'react'
 import * as motion from 'motion/react-client'
 import { FiChevronRight } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import { siteContent } from '../../constant/websiteContent'
 
 function ContactBanner() {
+    const { contact } = siteContent.pages;
+
     return (
         <section className="w-full py-16 md:py-24 bg-primary relative overflow-hidden flex flex-col items-center justify-center border-b border-divider">
             {/* Ambient glow orbs */}
@@ -22,9 +25,9 @@ function ContactBanner() {
                     transition={{ duration: 0.8, ease: 'easeOut' }}
                     className="text-white font-bold text-[40px] md:text-[56px] lg:text-[64px] tracking-tight leading-none"
                 >
-                    Contact{' '}
+                    {contact.bannerTitle}{' '}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-secondary to-accent">
-                        Us
+                        {contact.bannerTitleSpan}
                     </span>
                 </motion.h1>
 
@@ -36,12 +39,12 @@ function ContactBanner() {
                     className="flex items-center gap-2 text-white/60 text-sm md:text-base font-medium"
                 >
                     <Link to="/" className="hover:text-accent transition-colors duration-300">
-                        Home
+                        {contact.breadcrumbStart}
                     </Link>
                     <span className="text-accent/50">
                         <FiChevronRight size={16} />
                     </span>
-                    <span className="text-white">Contact Us</span>
+                    <span className="text-white">{contact.breadcrumbEnd}</span>
                 </motion.div>
             </div>
         </section>

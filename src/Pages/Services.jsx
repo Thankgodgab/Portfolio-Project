@@ -1,15 +1,6 @@
 import React from 'react'
 import * as motion from 'motion/react-client'
 import { IoIosArrowRoundForward } from 'react-icons/io'
-import { AiOutlineAndroid } from 'react-icons/ai'
-import { 
-  IoDiamondOutline, 
-  IoBrushOutline, 
-  IoCodeSlashOutline, 
-  IoBulbOutline, 
-  IoCartOutline 
-} from 'react-icons/io5'
-import { HiOutlineVideoCamera, HiOutlineAdjustments } from 'react-icons/hi'
 
 // Import matching subcomponents
 import ServicesBanner from '../Components/organisms/ServicesBanner'
@@ -17,51 +8,12 @@ import Carousel from '../Components/organisms/Carousel'
 import AboutExpertise from '../Components/organisms/AboutExpertise'
 import TestimonialSection from '../Components/molecules/TestimonialSection'
 import ContactSection from '../Components/molecules/ContactSection'
-
-const servicesList = [
-  {
-    icon: <AiOutlineAndroid size={36} className="text-accent" />,
-    title: "Mobile App Design & Development",
-    description: "Creating high-performing, feature-rich, and user-friendly mobile applications tailored to your business goals."
-  },
-  {
-    icon: <IoDiamondOutline size={36} className="text-accent" />,
-    title: "UI/UX Design System Creation",
-    description: "Designing comprehensive, scalable visual design systems to maintain product consistency and enhance developer handoff."
-  },
-  {
-    icon: <IoBrushOutline size={36} className="text-accent" />,
-    title: "Branding And Visual Identity",
-    description: "Crafting memorable logos, brand identity guidelines, and visual assets that effectively communicate your company values."
-  },
-  {
-    icon: <IoBulbOutline size={36} className="text-accent" />,
-    title: "Consultation And Strategy",
-    description: "Analyzing target markets, identifying opportunities, and defining strategic paths for launching successful digital products."
-  },
-  {
-    icon: <HiOutlineVideoCamera size={36} className="text-accent" />,
-    title: "Video Production Services",
-    description: "Creating engaging promotional videos, corporate messages, and animations to showcase your product features."
-  },
-  {
-    icon: <HiOutlineAdjustments size={36} className="text-accent" />,
-    title: "Motion Graphics and Animation",
-    description: "Animating UI mockups, designing micro-interactions, and rendering high-quality motion graphics that bring layouts to life."
-  },
-  {
-    icon: <IoCodeSlashOutline size={36} className="text-accent" />,
-    title: "Content Creation And Strategy",
-    description: "Writing copy, designing visual assets, and optimizing strategic content campaigns that align with your digital platform goals."
-  },
-  {
-    icon: <IoCartOutline size={36} className="text-accent" />,
-    title: "ECommerce Design & Development",
-    description: "Building responsive, secure, and user-friendly e-commerce online stores to optimize checkout conversion and sales."
-  }
-];
+import { siteContent } from '../constant/websiteContent'
 
 function Services() {
+  const { servicesPage } = siteContent.pages;
+  const { list } = siteContent.services;
+
   return (
     <div className="w-full flex flex-col bg-primary min-h-screen text-white">
       {/* Top Banner */}
@@ -81,20 +33,20 @@ function Services() {
           viewport={{ once: true }}
           className="text-center flex flex-col gap-4 mb-16 max-w-[800px]"
         >
-          <span className="text-accent uppercase tracking-widest text-sm font-semibold">My Specialization</span>
+          <span className="text-accent uppercase tracking-widest text-sm font-semibold">{servicesPage.badge}</span>
           <h2 className="text-white text-[32px] md:text-[45px] lg:text-[50px] font-bold leading-[1.2] tracking-tight">
-            Innovative best design and <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-secondary to-accent">development services</span>
+            {servicesPage.headerTitle}<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-secondary to-accent">{servicesPage.headerTitleSpan}</span>
           </h2>
           <p className="text-white/70 text-[16px] md:text-[18px] leading-relaxed">
-            As a skilled Product Designer and Developer, I offer a range of services tailored to help you create exceptional digital products and experiences.
+            {servicesPage.headerDescription}
           </p>
         </motion.div>
 
         {/* 8-Card Grid Layout */}
         <div className="w-full max-w-[1280px]">
           <div className="w-full gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {servicesList.map((service, index) => (
+            {list.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}

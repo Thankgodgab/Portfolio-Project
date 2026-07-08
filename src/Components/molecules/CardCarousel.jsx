@@ -9,44 +9,15 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-
-import { IoBrushOutline, IoCodeSlashOutline, IoDiamondOutline, IoHomeOutline, IoMove } from "react-icons/io5"
 import ServiceCardContent from "../organisms/ServiceCardContent"
 import Card from "./Card"
-import { AiOutlineAndroid } from "react-icons/ai"
 
 import * as motion from "motion/react-client"
-import { LuBot } from 'react-icons/lu';
-
-
-
-
-
-const services = [
-  { 
-    icon: <LuBot size={50} className="text-accent" />, 
-    title: 'AI Automation' },
-  { 
-    icon: <IoCodeSlashOutline size={50} className="text-accent" />, 
-    title: 'Web Development' },
-  { 
-    icon: <AiOutlineAndroid size={50} className="text-accent" />, 
-    title: 'Mobile App Development' },
-  { 
-    icon: <IoBrushOutline size={50} className="text-accent" />, 
-    title: 'Graphic Design' },
-  { 
-    icon: <IoDiamondOutline size={50} className="text-accent" />, 
-    title: 'Branding And Visual Identity' },
-    { 
-    icon: <IoMove size={50} className="text-accent" />, 
-    title: 'Motion Graphics' 
-  },
-  
-]
-
+import { siteContent } from '../../constant/websiteContent';
 
 function CardCarousel() {
+  const { services } = siteContent;
+
   return (
     <motion.div 
     initial={{ opacity: 0, x: 50 }}
@@ -71,10 +42,9 @@ function CardCarousel() {
         }}
         modules={[Pagination]} // Enable Pagination module
       >
-        {services.map((service, index) => (
-          <SwiperSlide className='mb-[50px]'>
+        {services.list.map((service, index) => (
+          <SwiperSlide key={index} className='mb-[50px]'>
             <Card
-                key={index}
                 content={<ServiceCardContent icon={service.icon} title={service.title} />}
                 className="w-full md:w-[300px] h-[200px] md:h-[250px]"
             />

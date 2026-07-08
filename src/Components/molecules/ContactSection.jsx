@@ -2,34 +2,11 @@ import React from 'react'
 import * as Motion from 'motion/react-client'
 import SubTitle from '../organisms/SubTitle'
 import ContactForm from '../organisms/ContactForm'
-import {
-    HiOutlineLocationMarker,
-    HiOutlinePhone,
-    HiOutlineMail,
-} from 'react-icons/hi'
-
-const contactInfo = [
-    {
-        icon: HiOutlinePhone,
-        label: 'Phone Number',
-        value: '+1 (123) 456-789',
-        href: 'tel:+1123456789',
-    },
-    {
-        icon: HiOutlineMail,
-        label: 'Email Address',
-        value: 'info@domain.com',
-        href: 'mailto:info@domain.com',
-    },
-    {
-        icon: HiOutlineLocationMarker,
-        label: 'Office Address',
-        value: '2972 Westheimer Rd. Santa Ana,\nNew York, USA',
-        href: null,
-    },
-]
+import { siteContent } from '../../constant/websiteContent'
 
 function ContactSection() {
+    const { contact } = siteContent;
+
     return (
         <section className="w-full relative overflow-hidden px-4 md:px-[80px] py-[100px]">
             {/* Ambient background glows */}
@@ -50,19 +27,17 @@ function ContactSection() {
                     >
                         <SubTitle
                             text="Contact Us"
-                            title="Get in touch to discuss your "
-                            titleSpan="next project"
+                            title={contact.title}
+                            titleSpan={contact.titleSpan}
                         />
                         <p className="text-white/70 text-[17px] leading-relaxed max-w-[520px]">
-                            Are you ready to take your project to the next level? Whether
-                            you&apos;re looking for a new website, a web application, or simply
-                            need advice — I&apos;m here to help.
+                            {contact.description}
                         </p>
                     </Motion.div>
 
                     {/* Contact Info Cards */}
                     <div className="flex flex-col gap-6">
-                        {contactInfo.map(({ icon: Icon, label, value, href }, i) => (
+                        {contact.info.map(({ icon: Icon, label, value, href }, i) => (
                             <Motion.div
                                 key={label}
                                 initial={{ opacity: 0, x: -30 }}

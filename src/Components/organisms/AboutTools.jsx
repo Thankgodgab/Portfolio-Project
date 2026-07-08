@@ -3,45 +3,18 @@ import * as motion from "motion/react-client"
 import { FaFigma, FaReact, FaJs, FaNodeJs, FaBuilding } from 'react-icons/fa'
 import { SiTailwindcss } from 'react-icons/si'
 import SubTitle from './SubTitle'
+import { siteContent } from '../../constant/websiteContent'
 
 function AboutTools() {
-    const tools = [
-        {
-            icon: <FaReact size={30} className="text-[#61DAFB]" />,
-            name: "React.js",
-            type: "Frontend Engineering",
-            percentage: 95
-        },
-        {
-            icon: <FaJs size={30} className="text-[#F7DF1E]" />,
-            name: "JavaScript / TypeScript",
-            type: "Core Programming",
-            percentage: 92
-        },
-        {
-            icon: <SiTailwindcss size={30} className="text-[#38BDF8]" />,
-            name: "TailwindCSS",
-            type: "UI / Styling Systems",
-            percentage: 95
-        },
-        {
-            icon: <FaFigma size={30} className="text-[#F24E1E]" />,
-            name: "Figma",
-            type: "UI/UX & Prototyping",
-            percentage: 90
-        },
-        {
-            icon: <FaNodeJs size={30} className="text-[#339933]" />,
-            name: "Node.js & Express",
-            type: "Backend APIs & Databases",
-            percentage: 85
-        },
-        {
-            icon: <FaBuilding size={26} className="text-accent" />,
-            name: "Real Estate Consulting",
-            type: "Valuation, Markets & Negotiation",
-            percentage: 90
-        }
+    const { aboutTools } = siteContent;
+
+    const icons = [
+        <FaReact size={30} className="text-[#61DAFB]" />,
+        <FaJs size={30} className="text-[#F7DF1E]" />,
+        <SiTailwindcss size={30} className="text-[#38BDF8]" />,
+        <FaFigma size={30} className="text-[#F24E1E]" />,
+        <FaNodeJs size={30} className="text-[#339933]" />,
+        <FaBuilding size={26} className="text-accent" />
     ];
 
     return (
@@ -57,15 +30,15 @@ function AboutTools() {
                 <div className="max-w-[800px] flex flex-col items-center">
                     <SubTitle 
                         text="My Toolkit"
-                        title="Design, develop, deliver: my "
-                        titleSpan="essential gear"
+                        title={aboutTools.title}
+                        titleSpan={aboutTools.titleSpan}
                     />
                 </div>
             </motion.div>
 
             {/* Tools Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {tools.map((tool, index) => (
+                {aboutTools.tools.map((tool, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 30 }}
@@ -77,7 +50,7 @@ function AboutTools() {
                         {/* Tool Info Header */}
                         <div className="flex items-center gap-4 text-left">
                             <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-divider group-hover:scale-110 transition-transform duration-300">
-                                {tool.icon}
+                                {icons[index % icons.length]}
                             </div>
                             <div className="flex flex-col">
                                 <h3 className="text-base md:text-lg font-bold text-white group-hover:text-accent transition-colors duration-300">

@@ -1,31 +1,11 @@
 import React from 'react'
 import * as Motion from 'motion/react-client'
-import logo from '../../assets/Gabriel-logo-dark.png'
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaDribbble, FaArrowUp } from 'react-icons/fa'
+import { FaArrowUp } from 'react-icons/fa'
+import { siteContent } from '../../constant/websiteContent'
 
 function Footer() {
+    const { footer } = siteContent;
     const currentYear = new Date().getFullYear();
-
-    const footerLinks = {
-        quickLinks: [
-            { name: 'Home', href: '/' },
-            { name: 'About Us', href: '/about' },
-            { name: 'Services', href: '/services' },
-            { name: 'Portfolio', href: '/portfolio' }
-        ],
-        services: [
-            { name: 'Mobile App Design', href: '#' },
-            { name: 'Branding And Visual Identity', href: '#' },
-            { name: 'Consultation And Strategy', href: '#' },
-            { name: 'UI/UX Design System Creation', href: '#' }
-        ],
-        viewMyWork: [
-            { name: 'Behance', href: '#' },
-            { name: 'Dribbble', href: '#' },
-            { name: 'Upwork', href: '#' },
-            { name: 'Fiverr', href: '#' }
-        ]
-    };
 
     return (
         <footer className="w-full min-h-[90vh] bg-gradient-to-br from-accent-secondary to-accent px-4 md:px-[80px] pt-[60px] pb-10 flex flex-col justify-between overflow-hidden">
@@ -39,7 +19,7 @@ function Footer() {
                         viewport={{ once: true }}
                         className="text-primary text-[45px] md:text-[50px] font-black leading-tight tracking-tighter"
                     >
-                        READY TO WORK WITH US?
+                        {footer.heading}
                     </Motion.h2>
                     <Motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -48,7 +28,7 @@ function Footer() {
                         viewport={{ once: true }}
                         className="text-primary/70 text-[18px] md:text-[22px] font-medium"
                     >
-                        Partner with our design agency for your business with amazing results.
+                        {footer.subheading}
                     </Motion.p>
                 </div>
 
@@ -68,7 +48,7 @@ function Footer() {
                             <circle cx="50" cy="50" r="48" fill="#111827" />
                             <text className="text-[12px] font-bold fill-accent tracking-[3.5px]">
                                 <textPath xlinkHref="#footerCirclePath">
-                                    GET STARTED NOW • GET STARTED NOW •
+                                    {footer.ctaBadgeText}
                                 </textPath>
                             </text>
                         </svg>
@@ -83,17 +63,12 @@ function Footer() {
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-[30px]">
                 {/* Logo & Info */}
                 <div className="flex flex-col gap-8">
-                    <img src={logo} alt="Gabriel Logo" className="w-[140px] h-auto" />
+                    <img src={footer.logo} alt="Logo" className="w-[140px] h-auto" />
                     <p className="text-primary/70 text-[16px] leading-relaxed">
-                        Crafting intuitive, user-centric designs that bring ideas to life. With a passion for innovation and creativity, I help businesses and individuals.
+                        {footer.description}
                     </p>
                     <div className="flex gap-4">
-                        {[
-                            { icon: FaDribbble, href: '#' },
-                            { icon: FaFacebookF, href: '#' },
-                            { icon: FaInstagram, href: '#' },
-                            { icon: FaLinkedinIn, href: '#' }
-                        ].map((social, index) => (
+                        {footer.socials.map((social, index) => (
                             <a
                                 key={index}
                                 href={social.href}
@@ -107,9 +82,9 @@ function Footer() {
 
                 {/* Link Columns */}
                 <div className="flex flex-col gap-8">
-                    <h4 className="text-primary text-[22px] font-bold">Quick Links</h4>
+                    <h4 className="text-primary text-[22px] font-bold">{footer.links.quickLinks.title}</h4>
                     <div className="flex flex-col gap-4">
-                        {footerLinks.quickLinks.map((link, index) => (
+                        {footer.links.quickLinks.items.map((link, index) => (
                             <a key={index} href={link.href} className="text-primary/70 text-[16px] hover:text-primary hover:translate-x-2 transition-all duration-300 w-fit">
                                 {link.name}
                             </a>
@@ -118,9 +93,9 @@ function Footer() {
                 </div>
 
                 <div className="flex flex-col gap-8">
-                    <h4 className="text-primary text-[22px] font-bold">Our Services</h4>
+                    <h4 className="text-primary text-[22px] font-bold">{footer.links.services.title}</h4>
                     <div className="flex flex-col gap-4">
-                        {footerLinks.services.map((link, index) => (
+                        {footer.links.services.items.map((link, index) => (
                             <a key={index} href={link.href} className="text-primary/70 text-[16px] hover:text-primary hover:translate-x-2 transition-all duration-300 w-fit">
                                 {link.name}
                             </a>
@@ -129,9 +104,9 @@ function Footer() {
                 </div>
 
                 <div className="flex flex-col gap-8">
-                    <h4 className="text-primary text-[22px] font-bold">View My Work</h4>
+                    <h4 className="text-primary text-[22px] font-bold">{footer.links.viewMyWork.title}</h4>
                     <div className="flex flex-col gap-4">
-                        {footerLinks.viewMyWork.map((link, index) => (
+                        {footer.links.viewMyWork.items.map((link, index) => (
                             <a key={index} href={link.href} className="text-primary/70 text-[16px] hover:text-primary hover:translate-x-2 transition-all duration-300 w-fit">
                                 {link.name}
                             </a>
@@ -143,7 +118,7 @@ function Footer() {
             {/* Copyright */}
             <div className="w-full text-center border-t border-black/10 pt-10">
                 <p className="text-primary/60 text-[16px]">
-                    Copyright © {currentYear} All Rights Reserved.
+                    Copyright © {currentYear} {footer.copyright}
                 </p>
             </div>
         </footer>

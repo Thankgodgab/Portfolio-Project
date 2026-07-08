@@ -3,31 +3,15 @@ import * as motion from "motion/react-client"
 import { PiTarget, PiEye, PiTrophy, PiPlayBold } from 'react-icons/pi'
 import SubTitle from './SubTitle'
 import Card from '../molecules/Card'
+import { siteContent } from '../../constant/websiteContent'
 
 function AboutApproach() {
-    const approaches = [
-        {
-            icon: <PiTarget size={40} className="text-accent" />,
-            title: "Our Mission",
-            desc: "To deliver top-tier web solutions and strategic real estate guidance that empower clients to scale their digital footprint and grow physical wealth."
-        },
-        {
-            icon: <PiEye size={40} className="text-accent" />,
-            title: "Our Vision",
-            desc: "To be a trusted partner in Nigeria and beyond, bridging technology and property development to foster long-term financial success and innovation."
-        },
-        {
-            icon: <PiTrophy size={40} className="text-accent" />,
-            title: "Our Goal",
-            desc: "To provide clean code, transparent property consulting, and client-centric solutions that exceed expectations and build lifelong partnerships."
-        }
-    ];
+    const { aboutApproach } = siteContent;
 
-    const stats = [
-        { value: "50+", label: "Projects Completed" },
-        { value: "2+", label: "Years of Experience" },
-        { value: "100+", label: "Satisfied Clients" },
-        { value: "99%", label: "Success Rate" }
+    const icons = [
+        <PiTarget size={40} className="text-accent" />,
+        <PiEye size={40} className="text-accent" />,
+        <PiTrophy size={40} className="text-accent" />
     ];
 
     return (
@@ -43,15 +27,15 @@ function AboutApproach() {
                 <div className="max-w-[800px] flex flex-col items-center">
                     <SubTitle 
                         text="Our Approach"
-                        title="Designing success with a strategic "
-                        titleSpan="framework"
+                        title={aboutApproach.title}
+                        titleSpan={aboutApproach.titleSpan}
                     />
                 </div>
             </motion.div>
 
             {/* Mission, Vision, Goal Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {approaches.map((item, index) => (
+                {aboutApproach.approaches.map((item, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 50 }}
@@ -66,7 +50,7 @@ function AboutApproach() {
                                 <div className="flex flex-col gap-6">
                                     <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-divider group-hover:bg-gradient-to-r group-hover:from-accent-secondary group-hover:to-accent group-hover:text-primary transition-all duration-300">
                                         <div className="group-hover:scale-110 transition-transform duration-300">
-                                            {item.icon}
+                                            {icons[index % icons.length]}
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-3">
@@ -120,7 +104,7 @@ function AboutApproach() {
                     viewport={{ once: true }}
                     className="lg:col-span-5 w-full grid grid-cols-2 gap-6"
                 >
-                    {stats.map((stat, idx) => (
+                    {aboutApproach.stats.map((stat, idx) => (
                         <div 
                             key={idx} 
                             className="bg-white/5 border border-divider rounded-2xl p-6 flex flex-col justify-center items-start group hover:border-accent-secondary/30 transition-all duration-300"

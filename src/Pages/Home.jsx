@@ -16,8 +16,8 @@ function Home() {
             <div className="flex flex-col items-center justify-start px-2">
                 <Hero />
                 <Carousel />
-                <ServicesSection />
                 <AboutSection />
+                <ServicesSection />
                 <SkillSection />
                 <PortfolioSection />
                 <EducationSection />

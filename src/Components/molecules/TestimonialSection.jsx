@@ -6,46 +6,10 @@ import 'swiper/css/navigation'
 import * as motion from 'motion/react-client'
 import SubTitle from '../organisms/SubTitle'
 import { HiStar, HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
-import profileImg from '../../assets/Profile.png'
-import { SiAdobe, SiFigma, SiGoogle, SiNetflix, SiSlack, SiSpotify } from 'react-icons/si'
-
-const testimonials = [
-    {
-        id: 1,
-        rating: 4,
-        text: "I'm a designer, illustrator, and creator of courses, templates, wireframe kits, and the occasionally useful side-projects. I'm a designer, illustrator, We begin by understanding your vision.",
-        author: "Jenny Wilson",
-        role: "Web Designer",
-        avatar: profileImg
-    },
-    {
-        id: 2,
-        rating: 5,
-        text: "Working with this team has been a game-changer for our brand. Their attention to detail and creative approach is world-class. Highly recommended for any professional project.",
-        author: "Robert Fox",
-        role: "Project Manager",
-        avatar: profileImg
-    },
-    {
-        id: 3,
-        rating: 5,
-        text: "The structured workflow and clear communication made the entire process seamless. The final result exceeded our expectations in every possible way. Truly fantastic work.",
-        author: "Kristin Watson",
-        role: "Startup Founder",
-        avatar: profileImg
-    }
-];
-
-const brands = [
-    { name: "Adobe", icon: SiAdobe },
-    { name: "Figma", icon: SiFigma },
-    { name: "Google", icon: SiGoogle },
-    { name: "Netflix", icon: SiNetflix },
-    { name: "Slack", icon: SiSlack },
-    { name: "Spotify", icon: SiSpotify },
-];
+import { siteContent } from '../../constant/websiteContent';
 
 function TestimonialSection() {
+    const { testimonials } = siteContent;
     const swiperRef = useRef(null);
 
     return (
@@ -62,8 +26,8 @@ function TestimonialSection() {
                     >
                         <SubTitle
                             text="Client Reviews"
-                            title="See what people are saying "
-                            titleSpan="about my work"
+                            title={testimonials.title}
+                            titleSpan={testimonials.titleSpan}
                         />
                     </motion.div>
 
@@ -75,15 +39,15 @@ function TestimonialSection() {
                         className="flex flex-col md:flex-row items-center gap-6"
                     >
                         <div className="flex -space-x-4">
-                            {[1, 2, 3].map((i) => (
+                            {testimonials.clientImages.map((img, i) => (
                                 <div key={i} className="w-[60px] h-[60px] rounded-full border-4 border-primary overflow-hidden bg-gray-800">
-                                    <img src={profileImg} alt="Client" className="w-full h-full object-cover" />
+                                    <img src={img} alt="Client" className="w-full h-full object-cover" />
                                 </div>
                             ))}
                         </div>
                         <div className="flex flex-col">
-                            <h4 className="text-white text-[20px] font-bold">1,000+ Happy Clients</h4>
-                            <p className="text-white/50 text-[16px]">Work With People And Brands Worldwide.</p>
+                            <h4 className="text-white text-[20px] font-bold">{testimonials.statsTitle}</h4>
+                            <p className="text-white/50 text-[16px]">{testimonials.statsSubtitle}</p>
                         </div>
                     </motion.div>
                 </div>
@@ -108,7 +72,7 @@ function TestimonialSection() {
                             }}
                             className="w-full"
                         >
-                            {testimonials.map((item) => (
+                            {testimonials.reviews.map((item) => (
                                 <SwiperSlide key={item.id}>
                                     <div className="flex flex-col gap-6">
                                         <div className="flex gap-1 text-accent">
@@ -158,7 +122,7 @@ function TestimonialSection() {
             <div className="w-full mt-10 border-t border-white/5 pt-[50px]">
                 <div className="overflow-hidden whitespace-nowrap">
                     <div className="inline-flex animate-marquee-slow py-4">
-                        {[...brands, ...brands, ...brands].map((brand, index) => (
+                        {[...testimonials.brands, ...testimonials.brands, ...testimonials.brands].map((brand, index) => (
                             <div key={index} className="flex items-center gap-2 mx-12 group grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
                                 <brand.icon size={35} className="text-white" />
                                 <span className="text-white text-[24px] font-bold tracking-tight">

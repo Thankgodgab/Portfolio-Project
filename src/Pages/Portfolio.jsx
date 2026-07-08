@@ -3,64 +3,16 @@ import * as motion from 'motion/react-client'
 import PortfolioBanner from '../Components/organisms/PortfolioBanner'
 import PortfolioCard from '../Components/molecules/PortfolioCard'
 import ContactSection from '../Components/molecules/ContactSection'
-
-// Import portfolio images
-import portfolio1 from '../assets/Portfolio-1.png'
-import portfolio2 from '../assets/Portfolio-2.png'
-
-const portfolioData = [
-  {
-    id: 1,
-    image: portfolio1,
-    title: "Volunteer Website Template",
-    category: "Web Design",
-    link: "https://volunteer-template.example.com"
-  },
-  {
-    id: 2,
-    image: portfolio2,
-    title: "Digital Marketing Website Template",
-    category: "UI / UX Design",
-    link: "https://marketing-template.example.com"
-  },
-  {
-    id: 3,
-    image: portfolio1,
-    title: "Travel Website Template",
-    category: "Web Development",
-    link: "https://travel-template.example.com"
-  },
-  {
-    id: 4,
-    image: portfolio2,
-    title: "Mobile App Design User Journeys",
-    category: "UI / UX Design",
-    link: "https://mobile-app-design.example.com"
-  },
-  {
-    id: 5,
-    image: portfolio1,
-    title: "E-Commerce Web Application",
-    category: "Web Development",
-    link: "https://ecommerce.example.com"
-  },
-  {
-    id: 6,
-    image: portfolio2,
-    title: "Revamping a Brand Identity",
-    category: "Web Design",
-    link: "https://brand-identity.example.com"
-  }
-];
-
-const categories = ["All", "UI / UX Design", "Web Design", "Web Development"];
+import { siteContent } from '../constant/websiteContent'
 
 function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const { portfolio } = siteContent;
+  const portfolioPage = siteContent.pages.portfolio;
 
   const filteredProjects = activeCategory === "All"
-    ? portfolioData
-    : portfolioData.filter(project => project.category === activeCategory);
+    ? portfolio.projects
+    : portfolio.projects.filter(project => project.category === activeCategory);
 
   return (
     <div className="w-full flex flex-col bg-primary min-h-screen text-white">
@@ -77,7 +29,7 @@ function Portfolio() {
           viewport={{ once: true }}
           className="flex flex-wrap justify-center items-center gap-3 md:gap-4 mb-16 max-w-full"
         >
-          {categories.map((category) => (
+          {portfolioPage.categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}

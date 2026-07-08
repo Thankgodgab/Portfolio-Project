@@ -4,9 +4,11 @@ import * as motion from "motion/react-client";
 import SubTitle from "../organisms/SubTitle";
 import Card from "./Card";
 import SkillCardContent from "../organisms/SkillCardContent";
-import { skills } from "../../constant";
+import { siteContent } from "../../constant/websiteContent";
 
 function SkillSection() {
+  const { skills } = siteContent;
+
   return (
     <div className="w-full h-full flex flex-col items-center justify-center px-2.5 md:px-[50px] py-[100px]">
       <div className="w-full flex items-start justify-start flex-col gap-10">
@@ -22,8 +24,8 @@ function SkillSection() {
         >
           <SubTitle
             text="My Tools"
-            title="Professional "
-            titleSpan="Skills & Technologies"
+            title={skills.title}
+            titleSpan={skills.titleSpan}
           />
         </motion.div>
         <motion.div
@@ -36,7 +38,7 @@ function SkillSection() {
           viewport={{ once: true }}
           className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 "
         >
-          {skills.map((skill, idx) => (
+          {skills.list.map((skill, idx) => (
             <SkillItem key={skill.name + idx} skill={skill} />
           ))}
         </motion.div>

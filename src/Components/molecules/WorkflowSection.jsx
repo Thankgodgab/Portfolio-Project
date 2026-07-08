@@ -2,28 +2,11 @@ import React, { useState } from 'react'
 import * as motion from 'motion/react-client'
 import SubTitle from '../organisms/SubTitle'
 import SpanText from '../organisms/SpanText'
-import heroImg from '../../assets/about-us-img-1.jpeg'
 import { HiOutlineArrowNarrowUp, HiOutlineArrowNarrowDown } from "react-icons/hi";
-
-const workflowSteps = [
-    {
-        id: 1,
-        title: "1. Discovery and Planning",
-        description: "We begin by understanding your vision, goal & requirement. Through collaborative discussions and research, we define the project scope and strategy."
-    },
-    {
-        id: 2,
-        title: "2. Design and Development",
-        description: "We begin by understanding your vision, goal & requirement. Through collaborative discussions and research."
-    },
-    {
-        id: 3,
-        title: "3. Delivery and Support",
-        description: "After rigorous testing, we deliver the final product and provide ongoing support to ensure everything runs smoothly and efficiently."
-    }
-];
+import { siteContent } from '../../constant/websiteContent';
 
 function WorkflowSection() {
+    const { workflow } = siteContent;
     const [openIndex, setOpenIndex] = useState(1); // Defaulting to the second item open as in image
 
     return (
@@ -37,7 +20,7 @@ function WorkflowSection() {
                 className="w-full max-w-[400px] aspect-[3/4] rounded-[60px] overflow-hidden"
             >
                 <img
-                    src={heroImg}
+                    src={workflow.image}
                     alt="Workflow Illustration"
                     className="w-full h-full object-top"
                 />
@@ -54,17 +37,17 @@ function WorkflowSection() {
                 >
                     <SubTitle
                         text="How it work"
-                        title="the structured workflow behind "
-                        titleSpan="our success"
+                        title={workflow.title}
+                        titleSpan={workflow.titleSpan}
                     />
                     <p className="text-white/70 text-[18px] leading-relaxed max-w-[550px]">
-                        Hi, I'm James, a passionate <span className="text-accent font-medium border-b border-accent/30 cursor-pointer hover:border-accent transition-all">UI/UX designer</span> who thrives on turning ideas into visually stunning realities. With a love for creativity and a meticulous eye for detail.
+                        {workflow.descriptionPart1}<span className="text-accent font-medium border-b border-accent/30 cursor-pointer hover:border-accent transition-all">{workflow.descriptionHighlight}</span>{workflow.descriptionPart2}
                     </p>
                 </motion.div>
 
                 {/* Accordion Steps */}
                 <div className="flex flex-col border-t border-white/10 mt-4">
-                    {workflowSteps.map((step, index) => (
+                    {workflow.steps.map((step, index) => (
                         <div
                             key={step.id}
                             className="border-b border-white/10 py-6 cursor-pointer group"

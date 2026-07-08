@@ -2,32 +2,11 @@ import React, { useState } from 'react'
 import * as motion from "motion/react-client"
 import { Link } from 'react-router-dom'
 import { HiOutlinePlus, HiOutlineX } from 'react-icons/hi'
+import { siteContent } from '../../constant/websiteContent'
 
 function AboutFaq() {
     const [openIndex, setOpenIndex] = useState(0);
-
-    const faqs = [
-        {
-            question: "How long does a project take to complete?",
-            answer: "The timeline depends on the scope and complexity of the project. A standard website might take 2-4 weeks, while a more complex web application could take 2-3 months. I provide a detailed timeline during the discovery phase."
-        },
-        {
-            question: "What is your design process?",
-            answer: "My process involves three main steps: discovery, design, and delivery. First, I'll gather all the necessary details about your project, including your goals and target audience. Then, I create wireframes and prototypes to ensure we're aligned before moving to development."
-        },
-        {
-            question: "Can I make changes after the project is completed?",
-            answer: "Yes! I offer post-launch support and maintenance packages. Minor tweaks are often included for a brief period after launch, and we can discuss an ongoing retainer for larger updates."
-        },
-        {
-            question: "Do you work with startups or small businesses?",
-            answer: "Absolutely. I enjoy working with businesses of all sizes. For startups and small businesses, I often focus on building scalable MVPs (Minimum Viable Products) that fit within their initial budgets."
-        },
-        {
-            question: "What happens if I don't like the initial designs?",
-            answer: "That's exactly why we do wireframing and prototyping first. Revisions are built into the process so we can refine the design until it perfectly matches your vision before any code is written."
-        }
-    ];
+    const { aboutFaq } = siteContent;
 
     return (
         <section className="w-full h-full flex flex-col lg:flex-row items-start justify-center px-4 md:px-[80px] py-[100px] gap-12 lg:gap-16 overflow-hidden">
@@ -49,23 +28,23 @@ function AboutFaq() {
                 </div>
                 
                 <h3 className="text-white text-[28px] font-bold leading-tight mb-4">
-                    You have different questions? Ask Away!
+                    {aboutFaq.ctaTitle}
                 </h3>
                 <p className="text-white/60 text-[16px] mb-10">
-                    Work With People And Brands Worldwide.
+                    {aboutFaq.ctaSubtitle}
                 </p>
                 
                 <Link 
                     to="/contact" 
                     className="bg-gradient-to-r from-accent-secondary to-accent text-primary font-bold px-8 py-4 rounded-full hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                 >
-                    Contact Us Now
+                    {aboutFaq.ctaButton}
                 </Link>
             </motion.div>
 
             {/* Right Side: Accordion */}
             <div className="w-full lg:w-[65%] flex flex-col gap-4 mt-8 lg:mt-0">
-                {faqs.map((faq, index) => {
+                {aboutFaq.faqs.map((faq, index) => {
                     const isOpen = openIndex === index;
 
                     return (

@@ -3,44 +3,11 @@ import * as motion from 'motion/react-client'
 import ExperienceCard from '../organisms/ExperienceCard'
 import SubTitle from '../organisms/SubTitle'
 import { HiOutlineAcademicCap, HiOutlineBriefcase } from "react-icons/hi";
-
-const educationData = [
-    {
-        title: "Harmony Institute",
-        subtitle: "Master in Visual Arts",
-        date: "2012 - 2014"
-    },
-    {
-        title: "Aurora Academy",
-        subtitle: "Bachelor in Visual Arts",
-        date: "2008 - 2012"
-    },
-    {
-        title: "Crystalbrook",
-        subtitle: "High School",
-        date: "1996 - 2008"
-    }
-];
-
-const workData = [
-    {
-        title: "Insightlancer",
-        subtitle: "Senior Designer",
-        date: "2018 - 2024"
-    },
-    {
-        title: "Self-Employed",
-        subtitle: "Visual Artist",
-        date: "2016 - 2018"
-    },
-    {
-        title: "KG Graphics Studio",
-        subtitle: "Web Designer",
-        date: "2014 - 2016"
-    }
-];
+import { siteContent } from '../../constant/websiteContent';
 
 function EducationSection() {
+    const { educationAndWork } = siteContent;
+
     return (
         <div className="w-full h-full flex flex-col items-center justify-center px-4 md:px-[80px] py-[100px] overflow-hidden">
             {/* Section Header */}
@@ -53,8 +20,8 @@ function EducationSection() {
             >
                 <SubTitle
                     text="Education & Work"
-                    title="Foundation and growth: my "
-                    titleSpan="education & work"
+                    title={educationAndWork.title}
+                    titleSpan={educationAndWork.titleSpan}
                 />
             </motion.div>
 
@@ -67,9 +34,9 @@ function EducationSection() {
                     viewport={{ once: true }}
                 >
                     <ExperienceCard
-                        title="Education"
+                        title={educationAndWork.educationTitle}
                         icon={HiOutlineAcademicCap}
-                        items={educationData}
+                        items={educationAndWork.educationList}
                     />
                 </motion.div>
 
@@ -80,9 +47,9 @@ function EducationSection() {
                     viewport={{ once: true }}
                 >
                     <ExperienceCard
-                        title="Work experience"
+                        title={educationAndWork.workTitle}
                         icon={HiOutlineBriefcase}
-                        items={workData}
+                        items={educationAndWork.workList}
                     />
                 </motion.div>
             </div>
