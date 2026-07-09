@@ -21,7 +21,7 @@ function Home() {
                 <SkillSection />
                 <PortfolioSection />
                 <EducationSection />
-                <WorkflowSection />
+                {/* <WorkflowSection /> */}
                 <TestimonialSection />
                 <ContactSection />
             </div>

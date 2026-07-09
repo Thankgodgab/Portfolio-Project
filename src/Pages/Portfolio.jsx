@@ -22,7 +22,7 @@ function Portfolio() {
       {/* Main Portfolio Grid Section */}
       <section className="w-full px-4 md:px-[80px] py-[80px] flex flex-col items-center justify-center overflow-hidden">
         {/* Category Filters */}
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -42,13 +42,13 @@ function Portfolio() {
               {category}
             </button>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Project Grid */}
         <div className="w-full max-w-[1280px]">
           <motion.div 
             layout
-            className="w-full gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+            className="w-full gap-8 grid grid-cols-1 md:grid-cols-2"
           >
             {filteredProjects.map((project) => (
               <motion.div

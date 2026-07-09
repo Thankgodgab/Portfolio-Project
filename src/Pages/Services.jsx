@@ -23,7 +23,7 @@ function Services() {
       <Carousel />
 
       {/* Services Grid Section */}
-      <section className="w-full px-4 md:px-[80px] py-[100px] flex flex-col items-center justify-center overflow-hidden">
+      <section className="w-full px-4 md:px-[80px] pb-[90px] flex flex-col items-center justify-center overflow-hidden">
         
         {/* Section Title Header */}
         <motion.div 
@@ -33,13 +33,13 @@ function Services() {
           viewport={{ once: true }}
           className="text-center flex flex-col gap-4 mb-16 max-w-[800px]"
         >
-          <span className="text-accent uppercase tracking-widest text-sm font-semibold">{servicesPage.badge}</span>
+          <span className="text-accent uppercase tracking-widest text-sm font-semibold">{servicesPage?.badge}</span>
           <h2 className="text-white text-[32px] md:text-[45px] lg:text-[50px] font-bold leading-[1.2] tracking-tight">
-            {servicesPage.headerTitle}<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-secondary to-accent">{servicesPage.headerTitleSpan}</span>
+            {servicesPage?.headerTitle}<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-secondary to-accent">{servicesPage?.headerTitleSpan}</span>
           </h2>
           <p className="text-white/70 text-[16px] md:text-[18px] leading-relaxed">
-            {servicesPage.headerDescription}
+            {servicesPage?.headerDescription}
           </p>
         </motion.div>
 

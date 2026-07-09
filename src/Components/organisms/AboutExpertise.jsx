@@ -3,15 +3,20 @@ import * as motion from "motion/react-client"
 import profileImage from "../../assets/about-us-img-1.jpeg"
 import { HiOutlineCode, HiOutlinePencil, HiOutlineOfficeBuilding, HiOutlineVideoCamera } from 'react-icons/hi'
 import { siteContent } from '../../constant/websiteContent'
+import { AiOutlineAndroid } from 'react-icons/ai'
+import { LuBot } from 'react-icons/lu'
+import { TbBrandAdobePhotoshop } from 'react-icons/tb'
+import { FaMeta } from 'react-icons/fa6'
 
 function AboutExpertise() {
     const { aboutExpertise } = siteContent;
 
     const icons = [
-        <HiOutlinePencil size={24} className="text-accent" />,
         <HiOutlineCode size={24} className="text-accent" />,
-        <HiOutlineVideoCamera size={24} className="text-accent" />,
-        <HiOutlineOfficeBuilding size={24} className="text-accent" />
+        <AiOutlineAndroid size={24} className="text-accent" />,
+        <LuBot size={24} className="text-accent" />,
+        <TbBrandAdobePhotoshop size={24} className="text-accent" />,
+        <FaMeta size={24} className="text-accent" />
     ];
 
     return (

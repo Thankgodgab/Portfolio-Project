@@ -5,11 +5,11 @@ function PortfolioCard({ image, title, category, link, className }) {
   return (
     <div className={`w-full flex flex-col gap-6 group cursor-pointer ${className}`}>
       {/* Card Image Container */}
-      <div className="relative w-full aspect-[4/3.8] rounded-[40px] overflow-hidden bg-[#1D2432]">
+      <div className="relative w-full rounded-[40px] overflow-hidden bg-[#1D2432]">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+          className="w-full h-full object-contain  transition-all duration-700 group-hover:scale-110"
         />
 
         {/* Hover Overlay */}

@@ -103,7 +103,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-8">
+                {/* <div className="flex flex-col gap-8">
                     <h4 className="text-primary text-[22px] font-bold">{footer.links.viewMyWork.title}</h4>
                     <div className="flex flex-col gap-4">
                         {footer.links.viewMyWork.items.map((link, index) => (
@@ -112,7 +112,7 @@ function Footer() {
                             </a>
                         ))}
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* Copyright */}
